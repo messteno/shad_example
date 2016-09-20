@@ -1,5 +1,5 @@
-#include <iostream>
 #include <vector>
+#include <iostream>
 
 int ReadNumber(std::istream &input_stream = std::cin);
 
