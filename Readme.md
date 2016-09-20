@@ -21,6 +21,16 @@ make
 make test
 ```
 
+Пример вывода тестов:
+
+```
+[----] /home/user/shad_example/tests/test.cpp:22: Assertion failed: 52 != 53
+[FAIL] basic_suite::error: (0.00s)
+[----] /home/user/shad_example/tests/test.cpp:25: Unexpected signal caught below this line!
+[FAIL] basic_suite::segfault: CRASH!
+[====] Synthesis: Tested: 3 | Passing: 1 | Failing: 2 | Crashing: 1
+```
+
 ### Features
 
 После сборки в каталоге contest создается файл, объединяющий исходный код в
