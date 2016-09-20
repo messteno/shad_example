@@ -1,7 +1,4 @@
 #include <criterion/criterion.h>
-#include <sstream>
-#include <vector>
-
 #include "process.h"
 
 Test(basic_suite, success) {
