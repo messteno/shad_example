@@ -1,26 +1,30 @@
-#include <criterion/criterion.h>
+#include <gtest/gtest.h>
 #include "process.h"
 
-Test(basic_suite, success) {
+TEST(TestSum, Success) {
     int first_number = 25;
     int second_number = 27;
     int answer = 52;
 
     int sum = ProcessSum(first_number, second_number);
-    cr_expect(sum == answer, "%d != %d", sum, answer);
+    EXPECT_EQ(sum, answer);
 }
 
-Test(basic_suite, error) {
+TEST(TestSum, Error) {
     int first_number = 25;
     int second_number = 27;
     int answer = 53;
 
     int sum = ProcessSum(first_number, second_number);
-    cr_expect(sum == answer, "%d != %d", sum, answer);
+    EXPECT_EQ(sum, answer);
 }
 
-Test(basic_suite, segfault) {
+TEST(TestSum, Segfault) {
     int *p = 0;
     *p = 0;
 }
 
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}

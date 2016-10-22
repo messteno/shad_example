@@ -12,6 +12,6 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/source)
 
 target_link_libraries(${target}
-    criterion)
+    gtest)
 
 add_test(NAME example_test COMMAND example_test)
